@@ -73,6 +73,55 @@
       margin: 0 auto;
     }
 
+    /* Manifesto section */
+    .about-manifesto {
+      padding: 80px 0 20px;
+      background:
+        radial-gradient(circle at 20% 0%, rgba(37, 99, 235, 0.08), transparent 45%),
+        radial-gradient(circle at 80% 100%, rgba(13, 148, 136, 0.08), transparent 40%),
+        var(--white);
+    }
+
+    .manifesto-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+      margin-top: 42px;
+    }
+
+    .manifesto-card {
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid rgba(37, 99, 235, 0.12);
+      box-shadow: 0 8px 30px rgba(37, 99, 235, 0.09);
+      border-radius: var(--radius);
+      padding: 30px 28px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .manifesto-card::before {
+      content: '';
+      position: absolute;
+      inset: 0 auto auto 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--red), var(--accent-teal));
+      opacity: 0.9;
+    }
+
+    .manifesto-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 44px rgba(37, 99, 235, 0.15);
+      border-color: rgba(37, 99, 235, 0.22);
+    }
+
+    .manifesto-card__text {
+      font-size: 16px;
+      color: var(--gray-600);
+      line-height: 1.75;
+    }
+
     /* Overview section */
     .about-overview {
       padding: 100px 0;
@@ -441,6 +490,10 @@
     }
 
     @media (max-width: 768px) {
+      .manifesto-grid {
+        grid-template-columns: 1fr;
+      }
+
       .partners-grid {
         grid-template-columns: 1fr;
       }
@@ -494,8 +547,38 @@
       </div>
       <h1 class="about-hero__title fade-up">О факультете<br>искусственного интеллекта</h1>
       <p class="about-hero__lead fade-up">
-        Готовим специалистов в сфере анализа данных, машинного обучения и глубокого обучения нового уровня. Выпускники успешно реализуют себя в государственных корпорациях и частном бизнесе.
+        Факультет искусственного интеллекта готовит специалистов в сфере анализа данных, машинного обучения и глубокого обучения нового уровня.
       </p>
+    </div>
+  </section>
+
+  <!-- MANIFESTO -->
+  <section class="about-manifesto">
+    <div class="container">
+      <h2 class="section__title fade-up">О факультете</h2>
+      <p class="section__subtitle fade-up">Ключевые принципы обучения, инфраструктура и карьерные возможности</p>
+      <div class="manifesto-grid">
+        <article class="manifesto-card fade-up">
+          <p class="manifesto-card__text">
+            Факультет искусственного интеллекта готовит специалистов в сфере анализа данных, машинного обучения и глубокого обучения нового уровня. Выпускники факультета смогут успешно реализовать себя как в работе в государственных корпорациях, так и в рамках частного бизнеса, решать практические задачи по развитию, созданию и усовершенствованию технологий искусственного интеллекта.
+          </p>
+        </article>
+        <article class="manifesto-card fade-up fade-up-delay-1">
+          <p class="manifesto-card__text">
+            Факультет оснащен современным техническим оборудованием. Открыта лаборатория искусственного интеллекта, в которой студенты и преподаватели могут реализовать самые смелые проекты под менторством ведущих разработчиков в сфере искусственного интеллекта. Обучающимся предоставляется доступ к суперкомпьютеру РУДН.
+          </p>
+        </article>
+        <article class="manifesto-card fade-up fade-up-delay-2">
+          <p class="manifesto-card__text">
+            Образовательные программы факультета искусственного интеллекта реализуются совместно с компаниями-партнерами — Сбер и Альфа-Банк — IT-гигантами, признанными не только в России. Обучение направлено на развитие конкретных практических навыков в области искусственного интеллекта необходимых для работы в крупнейших компаниях отрасли.
+          </p>
+        </article>
+        <article class="manifesto-card fade-up fade-up-delay-3">
+          <p class="manifesto-card__text">
+            Большинство студентов могут получить предложение о работе еще до окончания обучения в бакалавриате и имеют возможность продолжить учебу в магистратуре за счет работодателя.
+          </p>
+        </article>
+      </div>
     </div>
   </section>
 
